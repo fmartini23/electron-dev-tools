@@ -1,0 +1,42 @@
+{
+    "name": "electron-dev-tools",
+    "version": "0.1.0",
+    "description": "Um conjunto de ferramentas de desenvolvimento e depuração aprimoradas para o ambiente multi-processo do Electron.",
+    "author": {
+        "name": "Fernando Martini",
+        "url": "https://github.com/fmartini23"
+    },
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/fmartini23/electron-dev-tools.git"
+    },
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "files": [
+        "dist/"
+    ],
+    "scripts": {
+        "build": "tsc",
+        "watch": "tsc -w",
+        "lint": "eslint . --ext .ts,.tsx",
+        "start:example": "npm run build && electron ./example/main.js",
+        "dev": "npm run build && electronmon --patterns \"src/**/*,example/**/*\" ./example/main.js"
+    },
+    "devDependencies": {
+        "@types/node": "^20.11.24",
+        "@types/react": "^18.2.61",
+        "@types/react-dom": "^18.2.19",
+        "@typescript-eslint/eslint-plugin": "^7.1.0",
+        "@typescript-eslint/parser": "^7.1.0",
+        "electron": "^29.1.0",
+        "electronmon": "^2.0.2",
+        "eslint": "^8.57.0",
+        "eslint-config-prettier": "^10.1.8",
+        "eslint-plugin-react": "^7.33.2",
+        "prettier": "^3.2.5",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "typescript": "^5.3.3"
+    }
+}

@@ -1,0 +1,69 @@
+/* --- Reset Básico e Estilos Globais --- */
+body, html, #root {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden; /* Evita barras de rolagem no corpo da página */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #282a36; /* Cor de fundo principal (Dracula theme) */
+    color: #f8f8f2; /* Cor de texto principal */
+  }
+  
+  /* Melhora a renderização de fontes no macOS e Windows */
+  * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    box-sizing: border-box;
+  }
+  
+  /* --- Layout Principal da Aplicação --- */
+  .app-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+  }
+  
+  /* --- Barra de Abas (Tabs) --- */
+  .tab-bar {
+    display: flex;
+    flex-shrink: 0; /* Impede que a barra de abas encolha */
+    background-color: #21222c; /* Um pouco mais escuro que o fundo */
+    border-bottom: 1px solid #44475a;
+  }
+  
+  .tab-button {
+    padding: 10px 20px;
+    border: none;
+    background-color: transparent;
+    color: #bd93f9; /* Roxo */
+    font-size: 14px;
+    cursor: pointer;
+    outline: none;
+    border-bottom: 3px solid transparent; /* Espaço para o indicador ativo */
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+  }
+  
+  .tab-button:hover {
+    background-color: #44475a;
+  }
+  
+  .tab-button.active {
+    color: #f8f8f2; /* Branco */
+    font-weight: bold;
+    border-bottom-color: #bd93f9; /* Indicador roxo para a aba ativa */
+  }
+  
+  /* --- Área de Conteúdo --- */
+  .content-area {
+    flex-grow: 1; /* Faz com que a área de conteúdo ocupe todo o espaço restante */
+    overflow: hidden; /* O scroll será controlado pelos componentes filhos (ConsoleView, etc.) */
+  }
+  
+  /*
+    Cada painel de conteúdo (Console, IPC, etc.) deve ter 100% de altura
+    para preencher a 'content-area'. Os componentes já fazem isso com
+    seus estilos inline (height: '100%').
+  */
+  

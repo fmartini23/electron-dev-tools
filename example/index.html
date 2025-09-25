@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Aplicação de Exemplo para Electron DevTools</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: #333;
+            color: #eee;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        h1 {
+            color: #61dafb; /* React blue */
+        }
+        .container {
+            background-color: #444;
+            padding: 15px;
+            border-radius: 8px;
+        }
+        h2 {
+            margin-top: 0;
+            border-bottom: 1px solid #666;
+            padding-bottom: 5px;
+        }
+        button {
+            padding: 8px 12px;
+            font-size: 14px;
+            border-radius: 5px;
+            border: 1px solid #666;
+            background-color: #555;
+            color: #eee;
+            cursor: pointer;
+            margin-right: 10px;
+            transition: background-color 0.2s;
+        }
+        button:hover {
+            background-color: #666;
+        }
+        #response-area {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #222;
+            border-radius: 4px;
+            min-height: 20px;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+    <h1>Aplicação de Exemplo</h1>
+    <p>Use os botões abaixo para gerar eventos. Abra o <strong>Electron DevTools</strong> para monitorá-los.</p>
+
+    <div class="container">
+        <h2>1. Gerar Logs no Console</h2>
+        <button id="log-info">console.log('Info message')</button>
+        <button id="log-warn">console.warn('Warning message')</button>
+        <button id="log-error">console.error('Error message', { code: 500 })</button>
+    </div>
+
+    <div class="container">
+        <h2>2. Enviar Mensagens IPC</h2>
+        <button id="ipc-send">ipcRenderer.send('my-async-channel', 'Hello Main!')</button>
+        <button id="ipc-invoke">ipcRenderer.invoke('my-invoke-channel', 123)</button>
+        <h3>Resposta do 'invoke':</h3>
+        <div id="response-area"></div>
+    </div>
+
+    <!-- Importa o script do renderer da aplicação de exemplo -->
+    <script src="./renderer.js"></script>
+</body>
+</html>

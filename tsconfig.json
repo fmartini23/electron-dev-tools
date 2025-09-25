@@ -1,0 +1,39 @@
+{
+    "compilerOptions": {
+      /* --- Configurações Básicas --- */
+      "target": "ES2021", // Compila para uma versão moderna do JavaScript que o Electron suporta.
+      "module": "commonjs", // Usa o sistema de módulos padrão do Node.js.
+      "lib": ["DOM", "ES2021"], // Inclui tipos para o DOM (para o renderer) e funcionalidades do ES2021.
+      "allowJs": true, // Permite que arquivos .js sejam importados em arquivos .ts.
+      "sourceMap": true, // Gera source maps para facilitar a depuração do código compilado.
+      "outDir": "./dist", // Pasta de saída para todos os arquivos JavaScript compilados.
+      "rootDir": "./src", // Define o diretório raiz do código-fonte TypeScript.
+  
+      /* --- Verificação de Tipo Estrita --- */
+      "strict": true, // Habilita todas as opções de verificação de tipo estritas.
+      "noImplicitAny": true, // Exige tipos explícitos em vez de 'any' implícito.
+      "strictNullChecks": true, // Lida com 'null' e 'undefined' de forma mais segura.
+  
+      /* --- Resolução de Módulos --- */
+      "moduleResolution": "node", // Estratégia de resolução de módulos do Node.js.
+      "esModuleInterop": true, // Permite interoperabilidade entre módulos CommonJS e ES Modules.
+      "resolveJsonModule": true, // Permite importar arquivos .json como módulos.
+  
+      /* --- Configurações para React (JSX) --- */
+      "jsx": "react-jsx", // Habilita a transformação de JSX para o novo runtime do React.
+  
+      /* --- Configurações Avançadas --- */
+      "skipLibCheck": true, // Pula a verificação de tipos dos arquivos de declaração (.d.ts), acelerando a compilação.
+      "forceConsistentCasingInFileNames": true, // Garante que os nomes de arquivos sejam consistentes em maiúsculas/minúsculas.
+      "declaration": true, // Gera os arquivos de declaração de tipos (.d.ts) na pasta 'dist'. Essencial para um pacote NPM.
+      "declarationMap": true // Gera source maps para os arquivos de declaração.
+    },
+    "include": [
+      "src/**/*" // Diz ao TypeScript para incluir todos os arquivos dentro da pasta 'src'.
+    ],
+    "exclude": [
+      "node_modules", // Exclui a pasta node_modules da compilação.
+      "dist" // Exclui a pasta de saída para evitar loops de compilação.
+    ]
+  }
+  

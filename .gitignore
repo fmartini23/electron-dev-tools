@@ -1,0 +1,39 @@
+# Arquivos de log
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Pasta de dependências
+# Não versionar os pacotes instalados, pois eles podem ser reinstalados via 'npm install'
+node_modules/
+
+# Pasta de build
+# Não versionar o código compilado, pois ele é gerado a partir da pasta 'src'
+dist/
+
+# Arquivos de sistema operacional
+.DS_Store
+Thumbs.db
+
+# Arquivos de configuração de editores
+.vscode/
+.idea/
+
+# Arquivos de ambiente
+# Nunca versionar arquivos com senhas, chaves de API, etc.
+.env
+.env.local
+.env.*.local
+
+# Arquivos de cache de testes
+.jest-cache
+
+# Arquivos de build do Electron (se aplicável no futuro)
+release/
+build/
+*.p12
+*.crl
+*.cer
