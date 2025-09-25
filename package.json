@@ -1,6 +1,6 @@
 {
-    "name": "electron-dev-tools",
-    "version": "0.1.0",
+    "name": "electron-dev-tools-plus",
+    "version": "0.1.1",
     "description": "Um conjunto de ferramentas de desenvolvimento e depuração aprimoradas para o ambiente multi-processo do Electron.",
     "author": {
         "name": "Fernando Martini",

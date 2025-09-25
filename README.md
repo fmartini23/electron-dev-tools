@@ -7,8 +7,6 @@
 
 `electron-dev-tools` is an advanced development and debugging toolkit designed specifically for the multi-process environment of Electron. It provides a unified interface to monitor, profile, and debug your application, helping you build more robust and performant Electron apps, faster.  
 
-> **Note:** Replace this with an actual screenshot of your tool once it's running!  
-
 ---
 
 ## 🚀 Why electron-dev-tools?  
